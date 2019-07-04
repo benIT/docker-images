@@ -10,11 +10,21 @@ Each tree folder inherits from the parent docker image folder.
 
 Container image names accords to folder name.
 
+
+https://cloud.docker.com/u/benit/repository/list
+
 ## Build
 
-    git clone XXX
+### Docker Hub
+
+[Built images can be downloaded from docker hub.](https://cloud.docker.com/u/benit/repository/list)
+
+### Clone
+
+    git clone https://github.com/benIT/docker-images
     
     cd docker-images 
+
 
 ### Building benit/stretch 
        
@@ -58,6 +68,6 @@ Container image names accords to folder name.
      
      docker run -p 8003:80 -e http_proxy -e https_proxy -e no_proxy --name stretch-php-7.1 --rm -d  benit/stretch-php-7.1
 
-## Attach a container
+## Attach a shell to a container
 
     docker exec -ti stretch-php-7.0 bash
