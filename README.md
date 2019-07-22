@@ -71,3 +71,13 @@ https://cloud.docker.com/u/benit/repository/list
 ## Attach a shell to a container
 
     docker exec -ti stretch-php-7.0 bash
+    
+## PUbliSH at dockerhub
+
+    docker push benit/stretch-php-5.6
+         
+    docker push benit/stretch-php-7.0  
+       
+    docker push benit/stretch-php-7.1
+    
+    ...

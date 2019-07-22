@@ -7,6 +7,7 @@ RUN apt-get install -y libapache2-mod-php5.6
 RUN apt-get install -y php5.6-fpm
 
 #php packages
+RUN apt-get install -y php5.6-bcmath
 RUN apt-get install -y php5.6-cli
 RUN apt-get install -y php5.6-common
 RUN apt-get install -y php5.6-curl

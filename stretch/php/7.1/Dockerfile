@@ -7,6 +7,7 @@ RUN apt-get install -y libapache2-mod-php7.1
 RUN apt-get install -y php7.1-fpm
 
 #php packages
+RUN apt-get install -y php7.1-bcmath
 RUN apt-get install -y php7.1-cli
 RUN apt-get install -y php7.1-common
 RUN apt-get install -y php7.1-curl
