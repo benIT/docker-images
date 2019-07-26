@@ -5,6 +5,7 @@ RUN apt-get update
 #install common web stuffs
 RUN apt-get install -y apt-transport-https ca-certificates
 RUN apt-get install -y apache2
+RUN a2enmod headers
 RUN a2enmod ssl
 RUN a2enmod rewrite
 RUN a2ensite  default-ssl.conf
