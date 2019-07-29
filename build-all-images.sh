@@ -3,9 +3,15 @@ set -euo pipefail
 #IFS=$'\n\t'
 
 usage (){
-    echo -e "This script builds all 'Dockerfile' located in this folder. 2 options are managed."
-    echo -e "-f: force image to be build without cache: 'docker build --no-cache'"
-    echo -e "-p: push images at docker hub: 'docker push benit/image-name'"
+    echo -e "This script builds all 'Dockerfile' located in this folder. Available options:
+    \t-h: print help
+    \t-f: force image to be build without cache: 'docker build --no-cache'
+    \t-p: push images at docker hub: 'docker push benit/image-name'
+    examples:
+    \t./build-all-images.sh
+    \t./build-all-images.sh -f #build with no-cache
+    \t./build-all-images.sh -fp #build with no-cache + publish image at dockerhub
+    "
 }
 
 separator(){
@@ -15,8 +21,11 @@ separator(){
 
 PUSH_IMAGE=false
 NO_CACHE=""
-while getopts "fp" option; do
+while getopts "fph" option; do
     case "${option}" in
+        h) usage
+            exit 0
+            ;;
         f)
             NO_CACHE='--no-cache'
             ;;

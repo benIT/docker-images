@@ -81,3 +81,11 @@ https://cloud.docker.com/u/benit/repository/list
     docker push benit/stretch-php-7.1
     
     ...
+    
+## Build all images
+
+[see this script](build-all-images.sh):
+
+    ./build-all-images.sh
+
+    
