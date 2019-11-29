@@ -31,6 +31,10 @@ RUN apt-get install -y php7.2-xml
 RUN apt-get install -y php7.2-xmlrpc
 RUN apt-get install -y php7.2-zip
 
+#enable error reporting
+RUN sed -i 's/display_errors = Off/display_errors = On/' /etc/php/7.2/apache2/php.ini
+RUN sed -i 's/error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT/error_reporting = E_ALL/' /etc/php/7.2/apache2/php.ini
+
 #install composer
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
