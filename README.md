@@ -25,6 +25,9 @@ https://cloud.docker.com/u/benit/repository/list
     
     cd docker-images 
 
+### Building benit/openldap 
+       
+    docker build -t benit/openldap openldap/ --build-arg http_proxy --build-arg https_proxy
 
 ### Building benit/stretch 
        
